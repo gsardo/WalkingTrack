@@ -13,11 +13,13 @@ struct AddWalkView: View {
     
     @State private var nationalPark = ""
     @State private var trailName = ""
-    @State private var location = ""
+    @State private var state = "NSW"
     @State private var review = ""
     
+    let states = ["ACT", "NSW", "NT", "SA", "TAS", "VIC", "WA"]
+    
     var isFormValid: Bool {
-        if nationalPark.trimmingCharacters(in: .whitespaces).isEmpty || trailName.trimmingCharacters(in: .whitespaces).isEmpty || location.trimmingCharacters(in: .whitespaces).isEmpty {
+        if nationalPark.trimmingCharacters(in: .whitespaces).isEmpty || trailName.trimmingCharacters(in: .whitespaces).isEmpty || state.trimmingCharacters(in: .whitespaces).isEmpty {
             return false
         }
         
@@ -30,7 +32,12 @@ struct AddWalkView: View {
                 Section {
                     TextField("National park", text: $nationalPark)
                     TextField("Trail name", text: $trailName)
-                    TextField("Location", text: $location)
+                    
+                    Picker("Location", selection: $state) {
+                        ForEach(states, id: \.self) {
+                            Text($0)
+                        }
+                    }
                 }
                 
                 Section("Write a review") {
@@ -39,7 +46,7 @@ struct AddWalkView: View {
                 
                 Section {
                     Button("Save") {
-                        let newWalk = Walk(nationalPark: nationalPark, trailName: trailName, location: location, review: review)
+                        let newWalk = Walk(nationalPark: nationalPark, trailName: trailName, state: state, review: review)
                         modelContext.insert(newWalk)
                         dismiss()
                     }

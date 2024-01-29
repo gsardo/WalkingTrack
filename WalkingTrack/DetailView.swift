@@ -32,10 +32,17 @@ struct DetailView: View {
             }
             
             Text(walk.trailName)
+                .font(.headline)
+                .foregroundStyle(.primary)
+                .padding(.top)
             
-            Text(walk.location)
+            Text(walk.state)
+                .font(.subheadline)
+                .foregroundStyle(.secondary)
             
             Text(walk.review)
+                .padding()
+                .font(.callout)
         }
         .navigationBarTitleDisplayMode(.inline)
         .scrollBounceBehavior(.basedOnSize)
@@ -62,7 +69,7 @@ struct DetailView: View {
     do {
         let config = ModelConfiguration(isStoredInMemoryOnly: true)
         let container = try ModelContainer(for: Walk.self, configurations: config)
-        let example = Walk(nationalPark: "Great Forest", trailName: "Great Walk", location: "Bush", review: "Breathtaking")
+        let example = Walk(nationalPark: "Great Forest", trailName: "Great Walk", state: "NSW", review: "Breathtaking")
         
         return DetailView(walk: example)
             .modelContainer(container)

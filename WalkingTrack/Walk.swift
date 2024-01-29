@@ -12,13 +12,13 @@ import Foundation
 class Walk {
     var nationalPark: String
     var trailName: String
-    var location: String
+    var state: String
     var review: String
     
-    init(nationalPark: String, trailName: String, location: String, review: String) {
+    init(nationalPark: String, trailName: String, state: String, review: String) {
         self.nationalPark = nationalPark
         self.trailName = trailName
-        self.location = location
+        self.state = state
         self.review = review
     }
 }

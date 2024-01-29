@@ -19,7 +19,7 @@ struct ContentView: View {
                 ForEach(walks) { walk in
                     NavigationLink(value: walk) {
                         HStack {
-                            VStack {
+                            VStack(alignment: .leading) {
                                 Text(walk.trailName)
                                     .font(.headline)
                                 
@@ -41,7 +41,7 @@ struct ContentView: View {
                 }
                 
                 ToolbarItem(placement: .topBarTrailing) {
-                    Button("Add book", systemImage: "plus") {
+                    Button("Add new walk", systemImage: "plus") {
                         showingAddScreen.toggle()
                     }
                 }
