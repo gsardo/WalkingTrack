@@ -18,7 +18,7 @@ struct DetailView: View {
     var body: some View {
         ScrollView {
             ZStack(alignment: .bottomTrailing) {
-                Image("DetailHeader")
+                Image(walk.state)
                     .resizable()
                     .scaledToFit()
                 
