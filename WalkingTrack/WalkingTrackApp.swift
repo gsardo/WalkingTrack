@@ -5,6 +5,7 @@
 //  Created by Giuseppe Sardo on 29/1/2024.
 //
 
+import SwiftData
 import SwiftUI
 
 @main
@@ -13,5 +14,6 @@ struct WalkingTrackApp: App {
         WindowGroup {
             ContentView()
         }
+        .modelContainer(for: Walk.self)
     }
 }

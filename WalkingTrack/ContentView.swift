@@ -5,17 +5,58 @@
 //  Created by Giuseppe Sardo on 29/1/2024.
 //
 
+import SwiftData
 import SwiftUI
 
 struct ContentView: View {
+    @Environment(\.modelContext) var modelContext
+    @Query var walks: [Walk]
+    @State private var showingAddScreen = false
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            List {
+                ForEach(walks) { walk in
+                    NavigationLink(value: walk) {
+                        HStack {
+                            VStack {
+                                Text(walk.trailName)
+                                    .font(.headline)
+                                
+                                Text(walk.nationalPark)
+                                    .font(.subheadline)
+                            }
+                        }
+                    }
+                }
+                .onDelete(perform: deleteWalks)
+            }
+            .navigationTitle("WalkingTrack")
+            .navigationDestination(for: Walk.self){ walk in
+                DetailView(walk: walk)
+            }
+            .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    EditButton()
+                }
+                
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button("Add book", systemImage: "plus") {
+                        showingAddScreen.toggle()
+                    }
+                }
+            }
+            .sheet(isPresented: $showingAddScreen) {
+                AddWalkView()
+            }
         }
-        .padding()
+    }
+    
+    func deleteWalks(at offsets: IndexSet) {
+        for offset in offsets {
+            let walk = walks[offset]
+            modelContext.delete(walk)
+        }
     }
 }
 
