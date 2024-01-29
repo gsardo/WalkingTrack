@@ -10,8 +10,12 @@ import SwiftUI
 
 struct ContentView: View {
     @Environment(\.modelContext) var modelContext
-    @Query var walks: [Walk]
+    @Query(sort: \Walk.trailName) var walks: [Walk]
     @State private var showingAddScreen = false
+    @State private var sortOrder = [
+        SortDescriptor(\Walk.trailName),
+        SortDescriptor(\Walk.state)
+    ]
     
     var body: some View {
         NavigationStack {
@@ -43,6 +47,24 @@ struct ContentView: View {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button("Add new walk", systemImage: "plus") {
                         showingAddScreen.toggle()
+                    }
+                }
+                
+                ToolbarItem {
+                    Menu("Sort", systemImage: "arrow.up.arrow.down") {
+                        Picker("Sort", selection: $sortOrder) {
+                            Text("Sort by state")
+                                .tag([
+                                    SortDescriptor(\Walk.state),
+                                    SortDescriptor(\Walk.trailName)
+                                ])
+                            
+                            Text("Sort by name")
+                                .tag([
+                                    SortDescriptor(\Walk.trailName),
+                                    SortDescriptor(\Walk.state)
+                                ])
+                        }
                     }
                 }
             }
