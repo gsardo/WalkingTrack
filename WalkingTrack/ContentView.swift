@@ -27,7 +27,7 @@ struct ContentView: View {
                                 Text(walk.trailName)
                                     .font(.headline)
                                 
-                                Text(walk.nationalPark)
+                                Text("\(walk.nationalPark), \(walk.state)")
                                     .font(.subheadline)
                             }
                         }

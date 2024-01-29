@@ -16,7 +16,7 @@ struct AddWalkView: View {
     @State private var state = "NSW"
     @State private var review = ""
     
-    let states = ["ACT", "NSW", "NT", "SA", "TAS", "VIC", "WA"]
+    let states = ["ACT", "NSW", "NT", "QLD", "SA", "TAS", "VIC", "WA"]
     
     var isFormValid: Bool {
         if nationalPark.trimmingCharacters(in: .whitespaces).isEmpty || trailName.trimmingCharacters(in: .whitespaces).isEmpty || state.trimmingCharacters(in: .whitespaces).isEmpty {
