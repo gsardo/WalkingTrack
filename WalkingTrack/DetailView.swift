@@ -43,6 +43,21 @@ struct DetailView: View {
             Text(walk.review)
                 .padding()
                 .font(.callout)
+            
+            
+            
+            if let selectedPhotoData = walk.image,
+               let uiImage = UIImage(data: selectedPhotoData) {
+                Image(uiImage: uiImage)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(maxWidth: .infinity, maxHeight: 120)
+                    .clipShape(
+                        RoundedRectangle(
+                            cornerRadius: 10, style: .continuous)
+                    )
+            }
+            
         }
         .navigationBarTitleDisplayMode(.inline)
         .scrollBounceBehavior(.basedOnSize)
@@ -69,7 +84,7 @@ struct DetailView: View {
     do {
         let config = ModelConfiguration(isStoredInMemoryOnly: true)
         let container = try ModelContainer(for: Walk.self, configurations: config)
-        let example = Walk(nationalPark: "Great Forest", trailName: "Great Walk", state: "NSW", review: "Breathtaking")
+        let example = Walk(nationalPark: "Great Forest", trailName: "Great Walk", state: "NSW", review: "Breathtaking", image: nil)
         
         return DetailView(walk: example)
             .modelContainer(container)

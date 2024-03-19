@@ -14,11 +14,13 @@ class Walk {
     var trailName: String
     var state: String
     var review: String
+    var image: Data?
     
-    init(nationalPark: String, trailName: String, state: String, review: String) {
+    init(nationalPark: String, trailName: String, state: String, review: String, image: Data?) {
         self.nationalPark = nationalPark
         self.trailName = trailName
         self.state = state
         self.review = review
+        self.image = image
     }
 }
