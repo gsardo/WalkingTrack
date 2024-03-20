@@ -44,7 +44,11 @@ struct DetailView: View {
                 .padding()
                 .font(.callout)
             
-            
+            if let walkPhoto = walk.image {
+                ShareLink(item: walkPhoto, preview: SharePreview("Image from my walk", image: walkPhoto)) {
+                    Label("Share image", systemImage: "photo.artframe")
+                }
+            }
             
             if let selectedPhotoData = walk.image,
                let uiImage = UIImage(data: selectedPhotoData) {
