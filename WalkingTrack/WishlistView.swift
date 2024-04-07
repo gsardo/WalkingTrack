@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct WishlistView: View {
+    
     var body: some View {
         NavigationStack {
             Text("Walks on my wishlist")

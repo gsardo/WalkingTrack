@@ -17,6 +17,7 @@
 		1AC188342B675FDE00673691 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC188332B675FDE00673691 /* DetailView.swift */; };
 		1ADBDA1F2BC2D5F500ADAD46 /* WalkHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADBDA1E2BC2D5F500ADAD46 /* WalkHistoryView.swift */; };
 		1ADBDA212BC2D76F00ADAD46 /* WishlistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADBDA202BC2D76F00ADAD46 /* WishlistView.swift */; };
+		1ADBDA232BC2D94A00ADAD46 /* AddWishlistItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADBDA222BC2D94A00ADAD46 /* AddWishlistItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		1AC188332B675FDE00673691 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		1ADBDA1E2BC2D5F500ADAD46 /* WalkHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkHistoryView.swift; sourceTree = "<group>"; };
 		1ADBDA202BC2D76F00ADAD46 /* WishlistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistView.swift; sourceTree = "<group>"; };
+		1ADBDA222BC2D94A00ADAD46 /* AddWishlistItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWishlistItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				1ADBDA1E2BC2D5F500ADAD46 /* WalkHistoryView.swift */,
 				1AC188332B675FDE00673691 /* DetailView.swift */,
 				1AC188312B675D6C00673691 /* AddWalkView.swift */,
+				1ADBDA222BC2D94A00ADAD46 /* AddWishlistItemView.swift */,
 				1AC1882F2B675AC400673691 /* Walk.swift */,
 				1AC188252B675A7E00673691 /* Assets.xcassets */,
 				1AC188272B675A7E00673691 /* Preview Content */,
@@ -162,6 +165,7 @@
 				1AC188302B675AC400673691 /* Walk.swift in Sources */,
 				1AC188222B675A7C00673691 /* WalkingTrackApp.swift in Sources */,
 				1AC188342B675FDE00673691 /* DetailView.swift in Sources */,
+				1ADBDA232BC2D94A00ADAD46 /* AddWishlistItemView.swift in Sources */,
 				1AC188322B675D6C00673691 /* AddWalkView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
