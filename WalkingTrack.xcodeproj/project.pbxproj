@@ -15,6 +15,8 @@
 		1AC188302B675AC400673691 /* Walk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC1882F2B675AC400673691 /* Walk.swift */; };
 		1AC188322B675D6C00673691 /* AddWalkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC188312B675D6C00673691 /* AddWalkView.swift */; };
 		1AC188342B675FDE00673691 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC188332B675FDE00673691 /* DetailView.swift */; };
+		1ADBDA1F2BC2D5F500ADAD46 /* WalkHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADBDA1E2BC2D5F500ADAD46 /* WalkHistoryView.swift */; };
+		1ADBDA212BC2D76F00ADAD46 /* WishlistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADBDA202BC2D76F00ADAD46 /* WishlistView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		1AC1882F2B675AC400673691 /* Walk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Walk.swift; sourceTree = "<group>"; };
 		1AC188312B675D6C00673691 /* AddWalkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWalkView.swift; sourceTree = "<group>"; };
 		1AC188332B675FDE00673691 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		1ADBDA1E2BC2D5F500ADAD46 /* WalkHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkHistoryView.swift; sourceTree = "<group>"; };
+		1ADBDA202BC2D76F00ADAD46 /* WishlistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,8 @@
 				1AC188212B675A7C00673691 /* WalkingTrackApp.swift */,
 				1A77B2432B67D5850090E331 /* LaunchScreen.storyboard */,
 				1AC188232B675A7C00673691 /* ContentView.swift */,
+				1ADBDA202BC2D76F00ADAD46 /* WishlistView.swift */,
+				1ADBDA1E2BC2D5F500ADAD46 /* WalkHistoryView.swift */,
 				1AC188332B675FDE00673691 /* DetailView.swift */,
 				1AC188312B675D6C00673691 /* AddWalkView.swift */,
 				1AC1882F2B675AC400673691 /* Walk.swift */,
@@ -150,6 +156,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1ADBDA1F2BC2D5F500ADAD46 /* WalkHistoryView.swift in Sources */,
+				1ADBDA212BC2D76F00ADAD46 /* WishlistView.swift in Sources */,
 				1AC188242B675A7C00673691 /* ContentView.swift in Sources */,
 				1AC188302B675AC400673691 /* Walk.swift in Sources */,
 				1AC188222B675A7C00673691 /* WalkingTrackApp.swift in Sources */,
