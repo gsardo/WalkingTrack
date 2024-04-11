@@ -33,9 +33,14 @@ struct WishlistView: View {
                         }
                     }
                 }
+                .onDelete(perform: deleteWishlistItem)
             }
             .navigationTitle("Walk Wishlist")
             .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    EditButton()
+                }
+                
                 ToolbarItem(placement: .topBarTrailing) {
                     Button("Add new wishlist item", systemImage: "plus") {
                         showingAddScreen.toggle()
@@ -45,6 +50,13 @@ struct WishlistView: View {
             .sheet(isPresented: $showingAddScreen) {
                 AddWishlistItemView()
             }
+        }
+    }
+    
+    func deleteWishlistItem(at offsets: IndexSet) {
+        for offset in offsets {
+            let wishlistItem = wishlists[offset]
+            modelContext.delete(wishlistItem)
         }
     }
 }

@@ -13,7 +13,7 @@ struct AddWishlistItemView: View {
     
     @State private var nationalPark = ""
     @State private var trailName = ""
-    @State private var difficulty = ""
+    @State private var difficulty = "Easy"
     
     let difficultyRating = ["Easy", "Medium", "Hard"]
     
