@@ -18,7 +18,7 @@ struct AddWishlistItemView: View {
     let difficultyRating = ["Easy", "Medium", "Hard"]
     
     var isFormValid: Bool {
-        if nationalPark.trimmingCharacters(in: .whitespaces).isEmpty || trailName.trimmingCharacters(in: .whitespaces).isEmpty || difficulty.trimmingCharacters(in: .whitespaces).isEmpty {
+        if nationalPark.trimmingCharacters(in: .whitespaces).isEmpty || trailName.trimmingCharacters(in: .whitespaces).isEmpty {
             return false
         }
         
@@ -41,8 +41,9 @@ struct AddWishlistItemView: View {
                 
                 Section {
                     Button("Add to wishlist") {
-                        
-                        // add some code here to add a new wishlist item to SwiftData
+                        let newWishlist = Wishlist(nationalPark: nationalPark, trailName: trailName, difficulty: difficulty)
+                        modelContext.insert(newWishlist)
+                        dismiss()
                     }
                 }
                 .disabled(isFormValid == false)

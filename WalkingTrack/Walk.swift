@@ -5,8 +5,8 @@
 //  Created by Giuseppe Sardo on 29/1/2024.
 //
 
-import SwiftData
 import Foundation
+import SwiftData
 
 @Model
 class Walk {

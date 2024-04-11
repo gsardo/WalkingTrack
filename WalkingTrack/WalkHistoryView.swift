@@ -35,7 +35,7 @@ struct WalkHistoryView: View {
                 }
                 .onDelete(perform: deleteWalks)
             }
-            .navigationTitle("WalkingTrack")
+            .navigationTitle("Walk Log")
             .navigationDestination(for: Walk.self){ walk in
                 DetailView(walk: walk)
             }

@@ -14,6 +14,6 @@ struct WalkingTrackApp: App {
         WindowGroup {
             ContentView()
         }
-        .modelContainer(for: Walk.self)
+        .modelContainer(for: [Walk.self, Wishlist.self])
     }
 }
